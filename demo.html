@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+
+		* { border: 0; margin: 0; padding: 0 }
+		body { font: 12px Helvetica, Arial, sans-serif }
+
+		div {
+			border: 1px solid #ccc;
+			margin: 50px auto;
+			padding: 10px;
+			position: relative;
+			width: 500px;
+		}
+
+		div:before {
+			color: #999;
+			content: attr(id);
+			font: 12px Helvetica, Arial, sans-serif;
+			position: absolute;
+				bottom: 100%;
+				left: 10px;
+		}
+
+		#one {
+			line-height: 18px;
+		}
+
+		#two {
+			color: #900;
+			font: 2em/2em Georgia, serif;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="one">Bacon ipsum dolor sit amet prosciutto hamburger kielbasa jowl brisket doner shoulder ham hock. Tail jowl filet mignon shankle, capicola doner turkey andouille flank prosciutto strip steak cow tri-tip boudin. Tenderloin bacon filet mignon, frankfurter doner shoulder cow brisket ball tip meatball tri-tip beef ribs ham hock pastrami. Leberkas flank pastrami tail turducken bresaola fatback pork belly boudin spare ribs chuck sirloin beef. Ham hock meatloaf salami drumstick bresaola frankfurter shankle shoulder. Tenderloin rump capicola cow, pork beef ribs drumstick sirloin short ribs ball tip doner strip steak tri-tip turducken.</div>
+
+	<div id="two">Pork loin leberkas bresaola, ball tip salami jowl frankfurter tail pork chop ground round. Turkey turducken beef, doner strip steak shankle ground round sirloin meatloaf pork spare ribs meatball beef ribs sausage. Pork loin shank tail drumstick. Tail short ribs sausage chuck shank tongue ribeye. Shankle flank chuck meatloaf swine ham hock.</div>
+
+	<script src="src/textwidth.js"></script>
+	<script>
+
+		var one = document.getElementById('one');
+
+		textwidth.define('default', one);
+
+		var widthOne = textwidth.get('default', 'Bacon ipsum dolor sit amet prosciutto hamburger kielbasa jowl brisket doner shoulder ham hock. Tail jowl filet mignon shankle, capicola doner turkey andouille flank prosciutto strip steak cow tri-tip boudin. Tenderloin bacon filet mignon, frankfurter doner shoulder cow brisket ball tip meatball tri-tip beef ribs ham hock pastrami. Leberkas flank pastrami tail turducken bresaola fatback pork belly boudin spare ribs chuck sirloin beef. Ham hock meatloaf salami drumstick bresaola frankfurter shankle shoulder. Tenderloin rump capicola cow, pork beef ribs drumstick sirloin short ribs ball tip doner strip steak tri-tip turducken.');
+
+		console.log(widthOne);
+
+	</script>
+
+</body>
+</html>
